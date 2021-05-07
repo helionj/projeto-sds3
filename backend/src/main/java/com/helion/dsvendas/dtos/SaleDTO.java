@@ -9,16 +9,16 @@ public class SaleDTO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private Integer id;
-	private Integer visited;
-	private Integer deals;
+	private Long id;
+	private Long visited;
+	private Long deals;
 	private Double amount;
 	private LocalDate date;
 	private SellerDTO seller;
 	
 	public SaleDTO() {}
 
-	public SaleDTO(Integer id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDTO seller) {
+	public SaleDTO(Long id, Long visited, Long deals, Double amount, LocalDate date, SellerDTO seller) {
 		
 		this.id = id;
 		this.visited = visited;
@@ -38,27 +38,27 @@ public class SaleDTO implements Serializable{
 		seller = new SellerDTO(entity.getSeller());
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public Integer getVisited() {
+	public Long getVisited() {
 		return visited;
 	}
 
-	public void setVisited(Integer visited) {
+	public void setVisited(Long visited) {
 		this.visited = visited;
 	}
 
-	public Integer getDeals() {
+	public Long getDeals() {
 		return deals;
 	}
 
-	public void setDeals(Integer deals) {
+	public void setDeals(Long deals) {
 		this.deals = deals;
 	}
 

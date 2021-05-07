@@ -20,7 +20,7 @@ public class Seller implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	private String name;
 	
 	@OneToMany(mappedBy="seller")
@@ -30,19 +30,19 @@ public class Seller implements Serializable{
 	public Seller() {}
 
 
-	public Seller(Integer id, String name) {
+	public Seller(Long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
 	}
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -87,6 +87,9 @@ public class Seller implements Serializable{
 			return false;
 		return true;
 	}
+
+
+	
 	
 	
 

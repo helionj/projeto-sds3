@@ -8,12 +8,12 @@ public class SellerDTO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private Integer id;
+	private Long id;
 	private String name;
 	
 	public SellerDTO() {}
 
-	public SellerDTO(Integer id, String name) {
+	public SellerDTO(Long	 id, String name) {
 		
 		this.id = id;
 		this.name = name;
@@ -25,11 +25,11 @@ public class SellerDTO implements Serializable{
 		this.name = entity.getName();
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

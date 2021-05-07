@@ -19,9 +19,9 @@ public class Sale implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
-	private Integer visited;
-	private Integer deals;
+	private Long id;
+	private Long visited;
+	private Long deals;
 	private Double amount;
 	private LocalDate date;
 	
@@ -31,7 +31,7 @@ public class Sale implements Serializable{
 	
 	public Sale() {}
 
-	public Sale(Integer id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
+	public Sale(Long id, Long visited, Long deals, Double amount, LocalDate date, Seller seller) {
 		
 		this.id = id;
 		this.visited = visited;
@@ -41,27 +41,27 @@ public class Sale implements Serializable{
 		this.seller = seller;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public Integer getVisited() {
+	public Long getVisited() {
 		return visited;
 	}
 
-	public void setVisited(Integer visited) {
+	public void setVisited(Long visited) {
 		this.visited = visited;
 	}
 
-	public Integer getDeals() {
+	public Long getDeals() {
 		return deals;
 	}
 
-	public void setDeals(Integer deals) {
+	public void setDeals(Long deals) {
 		this.deals = deals;
 	}
 
@@ -88,7 +88,6 @@ public class Sale implements Serializable{
 	public void setSeller(Seller seller) {
 		this.seller = seller;
 	}
-	
 
 	@Override
 	public int hashCode() {
@@ -114,6 +113,9 @@ public class Sale implements Serializable{
 			return false;
 		return true;
 	}
+	
+
+	
 	
 	
 	
